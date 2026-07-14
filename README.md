@@ -10,7 +10,7 @@ browser.
 
 1. 1Open Xcode → **New Project** → macOS → **App**
   - Product Name: `Goorgle`
-  - Bundle ID: `app.yair.goorgle`
+  - Bundle ID: `app.developer.goorgle`
   - Interface: SwiftUI | Language: Swift
   - Minimum Deployment: macOS 15.0
 
