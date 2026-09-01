@@ -6,6 +6,8 @@ drops down with a focused text field and up to 3 live Google suggestions —
 type and hit Enter to search (or jump straight to a URL) in your default
 browser.
 
+OPTION 1 - Download release .dmg file and move to /Applications. Then go to System Settings/Privacy and Security and scroll down to "Open Anyway".
+
 ## 1. Create the Xcode Project
 
 1. 1Open Xcode → **New Project** → macOS → **App**
