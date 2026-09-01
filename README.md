@@ -1,7 +1,7 @@
 # Goorgle — Setup Guide
 
 A menu bar recreation of the Android search bar for your Mac desktop: click
-the icon (or press **⌃⌘Space** from anywhere), a rounded sky-blue pill
+the icon, press **⌃⌘Space** or your shortcut from anywhere, a rounded sky-blue pill
 drops down with a focused text field and up to 3 live Google suggestions —
 type and hit Enter to search (or jump straight to a URL) in your default
 browser.
