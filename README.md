@@ -115,28 +115,6 @@ Keyboard Shortcuts → "Emoji & Symbols".
 
 ---
 
-## Architecture Overview
-
-```
-Goorgle (menu bar agent, LSUIElement)
-├── GoorgleApp          – empty Settings scene; AppDelegate does the real work
-├── AppDelegate          – NSStatusItem (left-click toggles, right-click menu),
-│                          owns the SearchPanel + HotKeyMonitor
-├── SearchPanel           – borderless NSPanel, non-activating but key-capable,
-│                          transparent + fixed-size so unused space is invisible,
-│                          click-outside-to-dismiss via resignKey()
-├── Services/
-│   ├── HotKeyMonitor      – Carbon RegisterEventHotKey wrapper (⌃⌘Space),
-│   │                        no Accessibility permission required
-│   ├── LoginItemManager   – SMAppService wrapper for the login-item toggle
-│   └── GoogleSuggestClient – fetches Google's own autocomplete endpoint
-└── Views/
-    ├── SearchBarView      – sky-blue gradient pill + suggestions list,
-    │                        arrow-key navigation, submit → NSWorkspace.open
-    └── GoogleGMark        – stylized 4-color "G" glyph (arcs + bar), not the
-                             real asset
-```
-
 Design notes: the app moved off `MenuBarExtra` (used in the first version)
 because SwiftUI gives no public API to programmatically open a
 `MenuBarExtra`'s popover, which the global hotkey needs to do. A hand-rolled
@@ -149,3 +127,6 @@ dynamically-sized panel with far less code. The pill's gradient and corner
 radius (`Capsule`) lean into Android 16 / Material 3 Expressive's
 fully-rounded, high-contrast search bar look, recolored sky blue per
 request instead of the stock light gray/white fill.
+
+
+Built with Claude Code assistant. Therefore, the app is free to use and will be, forever.
