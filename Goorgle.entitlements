@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Deliberately NOT sandboxed. Spotlight file search (the /file mode)
+         works fine inside a sandbox, but NSWorkspace.open then refuses every
+         path outside the app's own container — verified: it returns false even
+         for a file in ~/Documents — so every file result would be a dead end.
+         Goorgle ships as an ad-hoc-signed .dmg, never through the App Store,
+         so the sandbox buys nothing it costs. Keep this key explicit rather
+         than absent, so the intent is visible in the signature. -->
+    <key>com.apple.security.app-sandbox</key>
+    <false/>
+    <!-- Only meaningful under the sandbox; harmless and documents the intent
+         that the app's one network dependency is the suggest endpoint. -->
+    <key>com.apple.security.network.client</key>
+    <true/>
+</dict>
+</plist>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Generated from code by scripts/make-icon.swift. Shipped as a plain
+         .icns in Resources rather than an asset catalog: this project's
+         pbxproj is maintained by hand, and one file reference is far less to
+         get wrong than a catalog's directory of Contents.json files. -->
+    <key>CFBundleIconFile</key>
+    <string>Goorgle</string>
+    <!-- Menu bar agent: no Dock icon, no app switcher entry -->
+    <key>LSUIElement</key>
+    <true/>
+    <!-- goorgle:// — how Yair's Apps opens the search panel and the
+         preferences window. Menu bar consolidation deliberately does *not*
+         ride on this scheme; it uses distributed notifications instead.
+         See HubCommand.swift. -->
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>app.yair.goorgle</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>goorgle</string>
+            </array>
+        </dict>
+    </array>
+</dict>
+</plist>
